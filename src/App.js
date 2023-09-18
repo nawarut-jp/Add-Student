@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import Header from "./components/Header";
+import StudentList from "./components/StudentList";
+import "./App.css";
+import AddFrom from "./components/AddFrom";
 function App() {
+  const [students, setStudent] = useState([
+    // { id: 1, name: "Tan" },
+  ]);
+
+  function deleteStudent(id) {
+    setStudent(students.filter((item) => item.id !== id));
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="containter">
+      <Header title="Home" />
+      <main>
+        <AddFrom students={students} setStudent={setStudent}/>
+        <StudentList students={students} deleteStudent={deleteStudent}/>
+      </main>
     </div>
   );
 }

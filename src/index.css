@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,400;0,500;1,200&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+a {
+  text-decoration: none; /*  ขีดเส้นใต้ */
+  color: black;
+}
+
+li {
+  list-style: none; /* จุดข้างหน้า */
+}
+
+main{
+  min-height: 90px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
 }
